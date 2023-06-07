@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>データのまとまりを扱う</title>
+        <meta name="description" content="データのまとまりを効率的に書こう">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h4>文字列やシンボルの配列を効率的に書く方法を知ろう</h4>
+        <p><font color="red">%(パーセント)記法</font>と呼ばれる記述方法がRubyにはある。</p>
+        <p>%記法を使うと文字列やシンボルの配列をより効率的に書くことが出来る。</p>
+        <p>%記法の演算子は、<font color="red">%(パーセント)</font>の後に予め決められた英子文字と英大文字を繋ぎ合わせて定義されている。</p>
+        <p>%に続く文字の小文字・大文字の違いは式の展開の有無。</p>
+        <p>主な％記法の演算子</p>
+        <table border="2">
+            <tr>
+                <th>演算子</th>
+                <th>配列の要素</th>
+                <th>式の展開</th>
+            </tr>
+            <tr>
+                <td>%w</td>
+                <td>文字列</td>
+                <td>なし</td>
+            </tr>
+            <tr>
+                <td>%i</td>
+                <td>シンボル</td>
+                <td>なし</td>
+            </tr>
+            <tr>
+                <td>%W</td>
+                <td>文字列</td>
+                <td>あり</td>
+            </tr>
+            <tr>
+                <td>%I</td>
+                <td>シンボル</td>
+                <td>あり</td>
+            </tr>
+        </table>
+    </body>
+</html>
