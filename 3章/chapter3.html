@@ -40,5 +40,40 @@
                 <td>あり</td>
             </tr>
         </table>
+        <h4>%wと%i</h4>
+            <div class="hash">文字列の配列を%記法を用いて記述するには、<font color="red">%w(文字列1 文字列2...)</font>と記述する。</div>
+                <p><font color="red">['文字列１','文字列2',・・・]</font>と同等。</p>
+                <p>%wを使って書くと通常より短く記述することができる。</p>
+                <p>文字列1、文字列2の部分を普通に書くとクォーテーションで囲む必要があるが、%記法を用いることで囲む必要がなくなる。</p>
+                <p>文字列ごとの区切りを示するカンマも不要で、半角スペースのみで表現できる。</p>
+            <div class="hash">シンボルの配列を%記法を用いて記述するためには、<font color="red">%i(シンボル1 シンボル2...)</font>と記述する。</div>
+                <p>シンボルの先頭の:(コロン)を省略できる。</p>
+                <p><font color="red">%i</font>を用いずに記述した場合は<font color="red">[:シンボル1,:シンボル2,...]となる。</font></p>
+                <table border="2">
+                    <tr>
+                        <th></th>
+                        <th>文字列の配置</th>
+                        <th>シンボルの配列</th>
+                    </tr>
+                    <tr>
+                        <td>通常</td>
+                        <td>['dog','cat','mouse']</td>
+                        <td>[:dog,:cat,:mouse]</td>
+                    </tr>
+                    <tr>
+                        <td>短縮形</td>
+                        <td>%w(dog cat mouse)</td>
+                        <td>%i(dog cat mouse)</td>
+                    </tr>
+                </table>
+        <h4>式の展開をする%Wと%I</h4>
+            <p>%記法には式を展開する<font color="red">%W、%I</font>がある。</p>
+            <p>%Wは文字列の配列を効率的に表す%wの式展開版</p>
+            <p>%Iはシンボルの配列を効率的に表す%iの式展開版</p>
+            <div class="hash">例:%W</div>
+                <p><font color="red">a=%W(#{1+1}#{1+2})</font>とすると<font color="red">1＋1</font>と<font color="red">1+2</font>がそれぞれ評価されて、変数aには<font color="red">['2','3']</font>が代入される。</p>
+            <div class="hash">例:%I</div>
+                <p><font color="red">a= %I(#{'b'+'c'}#{'d'+'e'})</font>とすると<font color="red">'b'+'c'</font>と<font color="red">'d'+'e'</font>がそれぞれ評価されて、変数aには<font color="red">[:bc,:de]</font>が代入される。</p>
+        
     </body>
 </html>
