@@ -30,12 +30,34 @@
                 <p>シンボルを用いると、ハッシュは<font color="red">{:key1 => 値1, :key => 値2,・・・}</font>と記述できます。</p>
                 <p>更に省略出来る→<font color="red">{ key1: 値1,key2:値2,・・・}</font>となる。省略するときはキー名のシンボルの定義に必要な:(コロン)が先頭ではなくキー名の末尾に記述され、<br>
                     キー名と値の対応を表現する<font color="red">=></font>演算子が省略されている。</p>
-            <h5>例</h5>
-                <div class="hash">キーが文字列の場合</div>
-                    <p>{"key1" => 値1, "key2" => 値2,・・・}</p>
-                <div class="hash">キーがシンボルの場合</div>
-                    <p>{:key1 => 値1, :key2 => 値2,・・・}</p>
-                <div class="hash">キーがシンボルの場合(短縮形)</div>
-                    <p>{key1 :値1, key2 :値2,・・・}</p>
-     </body>
+                <h5>例</h5>
+                    <div class="hash">キーが文字列の場合</div>
+                        <p>{"key1" => 値1, "key2" => 値2,・・・}</p>
+                    <div class="hash">キーがシンボルの場合</div>
+                        <p>{:key1 => 値1, :key2 => 値2,・・・}</p>
+                    <div class="hash">キーがシンボルの場合(短縮形)</div>
+                        <p>{key1 :値1, key2 :値2,・・・}</p>
+                
+            <div class="hash">シンボルとは</div>
+                <p><font color="red">deleateメソッド</font>：ハッシュの要素を削除する</p>
+                <p>メソッドの引数にキー名を指定することで該当のキーと値のペアを削除できる。</p>
+                <p>ハッシュ.delete(キー)</p>
+                <li>配列のdeleteメソッドとほぼ同等の機能ですが、ハッシュのdeleteメソッドはハッシュ用のものであり、配列用に提供されるdeleteとは別物。</li>
+                <h5>例</h5>
+                <p>child = { height: 110, weight: 20, age:7 }</p>
+                <p>#ハッシュの要素削除</p>
+                <p>child.delete(:age)</p>
+                    <!--これにより引数の:ageのキーが削除され、{height:110,weight:20}となる。-->
+            <div class="hash">存在しないキー名を指定した場合</div>
+                <p>ハッシュが格納された変数に存在しないキー名を指定した場合は、対応する要素も未定義なのでRubyで「無」を意味する<font color="red">nill</font>が返却される。</p>
+    
+            <div class="hash">ハッシュに要素を追加するメソッド</div>
+                <p>ハッシュ用の<font color="red">storeメソッド</font>でも要素を追加できる。</p>
+                <p>storeメソッドは1番目の引数にキー名を、2番目の引数に値をカンマ(,)で区切って、<font color="red">ハッシュ.store(キー,値)</font>と記述する。</p>
+                    <h5>例</h5>
+                    <p>ハッシュ.store(キー,値)</p>
+                    <p>child = {height: 110, weight: 20}</p>
+                    <p>child.store(:age, 7)</p>
+                    <!--これにより:ageキーが追加され、{height:110,weight:20,age:7}となる。-->
+    </body>
 </html>
