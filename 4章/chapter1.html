@@ -19,6 +19,42 @@
             <u>順次処理</u>
                 <p><font color="red">上から順番に処理を行う</font>特徴から、すべてのプログラムが実行される。</p>
                 <p>しかし、傘を思っていくのが雨の日だけであるように、特定の条件でのみ、プログラムを実行することが求められる場面は少なくありません。</p>
-    
+        <f4>インデント</f4>
+            <p><font color="red">インデント</font>if([理解]参照)で実行したい処理は、ifの位置より半角スペース2つを入れて字下げすること。一般的に行う。</p>
+            <p>実はRubyではif式で実行したい処理をインデントしなくても文法エラーにはならないが、インデントしないと人が読んでわかありにくいので、<br>
+                一般的なコーディング規約ではインデントを推奨している。</p>
+            <p><font color="red">if~end</font>で囲まれた処理は複数行書くことができる。この時もifの条件式がtrueだった場合に実行される処理の塊であること<br>
+                がわかりやすいようにインデントを揃えることが推奨される。</p>
+        <h4>条件分岐の構文と比較演算子の種類を理解しよう</h4>
+            <u>if式と条件式</u>
+                 <p>Rubyで条件分岐を表現するには、条件部分である<font color="red">if</font>を使った構文を利用する。</p>
+                 <p>↑この構文を<font color="red">if式</font>と呼ぶ。</p>
+                 <p>if式の終了を表す<font color="red">end</font>を記述する必要がある。</p>
+                 <p>ifの後には、半角スペースを置いて<font color="red">条件式</font>を記述する。</p>
+                 <p><font color="red">条件式</font>とは、データが一致するかどうかや数値の大小など特定の条件が正しいか否かを判断するプログラムのこと。以下の二つがある。</p>
+                    <li>条件式が正しい場合(<font color="red">真</font>)→<font color="red">true</font></li>
+                    <li>条件式が誤っている場合(<font color="red">偽</font>)→<font color="red">false</font></li>
+                <p><font color="red">真偽値</font>:trueとfalseをまとめて呼ぶ。</p>
+            <u>条件式の表現方法</u>
+                <p>条件を表現するのに専用の演算子(比較演算子)が用意されている。</p>
+                <p>例:値が等しいことを評価するには<font color="red">==</font>と「=」記号を２つ並べて記述する。</p>
+                <p>数学では「=」記号一つで左辺と右辺が等しいことを表現するが、Rubyでは「=」記号一つですと、変数への代入を意味してしまうので２つ並べる。</p>
+                <p><font color="red">!</font>記号はRubyでは否定の表現としてしばしば用いられる。</p>
+                <p><font color="red">!=</font>の評価結果は「==」の逆つまり、等しくない場合に<font color="red">true</font>になる。</p>
+            <u>if式</u>
+                <p>if式の基本的な構文(条件式がtrueの場合に実行)</p>
+                <p>if 条件式</p>
+                <p>   処理</p>
+                <p>end</p>
+            <u>if-else式</u>
+                <p><font color="red">else</font>を使うときは、if式の条件式がfalseの場合。</p>
+                <p><font color="red">if~else~end</font>と記述すると、ifの条件式がfalseの場合にelseとendで囲まれた部分の処理が実行される。</p>
+                <p><font color="red">else~end</font>で囲まれる処理も複数行記述できる。→else前に記述した処理と同様、<font color="red">else~end</font>で囲まれる処理もインデントを揃える。</p>
+                <p><font color="red">if~else</font>の間のインデントと<font color="red">else~end</font>の間のインデントを揃えなくてもいいが、読みやすくするためにインデントで揃える。</p>
+                <p>if 条件式</p>
+                <p>   処理A</p>
+                <p>else</p>
+                <p>   処理B</p>
+                <p>end</p>
     </body>
 </html>
