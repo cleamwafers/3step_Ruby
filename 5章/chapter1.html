@@ -36,11 +36,20 @@
                     <p>&nbsp;&nbsp;処理C</p>
                     <p>end</p>
                 <u>{~}表記</u>
-                <p>timesメソッドのdo~endは、{~}で書き換えることができる。</p>
-                <p>数値.times{ |変数|</p>
-                <p>&nbsp;&nbsp;処理A</p>
-                <p>&nbsp;&nbsp;処理B</p>
-                <p>&nbsp;&nbsp;処理C</p>
-                <p>}</p>
+                    <p>timesメソッドのdo~endは、{~}で書き換えることができる。</p>
+                    <p>数値.times{ |変数|</p>
+                    <p>&nbsp;&nbsp;処理A</p>
+                    <p>&nbsp;&nbsp;処理B</p>
+                    <p>&nbsp;&nbsp;処理C</p>
+                    <p>}</p>
+                <u>Rubyブロック</u>
+                    <p><font color="red">ブロック</font>:<font color="red">do~end</font>で囲まれた処理のまとまり</p>
+                    <p>例:10.times { |i| p i}</p>
+                    <p>Rubyは改行の有無に関係なく、<font color="red">do~end</font>でも<font color="red">{~}</font>でもブロックとして認識。</p>
+                    <p>ただし主なコーディングの規約の慣習として<font color="red">do~end</font>で囲まれたブロックの処理は改行してインデントし、<br>
+                        <font color="red">{~}</font>で囲まれたブロックの処理は1行で記述することが多い。
+                    </p>
+                    <p>ブロックで実行したい処理が複数行にまたがる場合は<font color="red">do~end</font>を使用する。</p>
+                    <p>逆にブロックで実行したい処理が1行で記述できるほど短い場合は<font color="red">{~}</font>を使用する。</p>
         </body>
     </html>
