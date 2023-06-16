@@ -26,5 +26,21 @@
                     <li>繰り返し回数を<font color="red">do~end</font>で囲まれた処理で使いたい場合はdoの後に半角スペースで<br>
                         <font color="red">| 変数 |</font>と指定することで利用できる。
                     </li>
+                    <p>定数は「0」から繰り返しのたびに「1」ずつ増えていく。</p>
+                    <p>変数に入る実際の値は<font color="red">繰り返し回数-1</font>の値であることに注意が必要。配列のサイズとインデックスの関係によく似ている。
+                    </p>
+                <u>do~end表記</u>
+                    <p>数値.times do |変数|</p>
+                    <p>&nbsp;&nbsp;処理A</p>
+                    <p>&nbsp;&nbsp;処理B</p>
+                    <p>&nbsp;&nbsp;処理C</p>
+                    <p>end</p>
+                <u>{~}表記</u>
+                <p>timesメソッドのdo~endは、{~}で書き換えることができる。</p>
+                <p>数値.times{ |変数|</p>
+                <p>&nbsp;&nbsp;処理A</p>
+                <p>&nbsp;&nbsp;処理B</p>
+                <p>&nbsp;&nbsp;処理C</p>
+                <p>}</p>
         </body>
     </html>
